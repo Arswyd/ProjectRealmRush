@@ -233,3 +233,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea3817e597e09046baa23786b807e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlaceable: 1
