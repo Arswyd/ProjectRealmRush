@@ -68,7 +68,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 1
+  speed: 0.75
 --- !u!114 &-5214901172432485481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0320c3c913a855c4aba14e56f1e95fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHitPoints: 5
-  currentHitPoints: 0
+  enemyHitPoints: 3
+  difficultyRamp: 2
 --- !u!114 &1297068166447601685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7f1173de4a5fa4daedff6e3db3e05a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldReward: 25
+  goldPenalty: 25
 --- !u!1001 &5231020232033778004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150,6 +152,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 37de223720020eb4e86c486cfbf70665, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ae2965365b28cc49acdb8ae4e5f5892, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37de223720020eb4e86c486cfbf70665, type: 3}
 --- !u!4 &5231020232034165712 stripped
