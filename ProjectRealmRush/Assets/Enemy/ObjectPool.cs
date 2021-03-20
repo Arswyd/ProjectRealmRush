@@ -34,7 +34,7 @@ public class ObjectPool : MonoBehaviour
 
     IEnumerator SpawnEnemy()
     {
-        while (Time.time < 5f)
+        while (true)
         {
             EnableObjectInPool();
             yield return new WaitForSeconds(spawnTimer);
