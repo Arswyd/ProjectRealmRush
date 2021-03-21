@@ -8,21 +8,49 @@ public class Bank : MonoBehaviour
 {
     [SerializeField] int startingBalance = 150;
 
-    [SerializeField] int currentBalance;
+    int currentBalance;
     public int CurrentBalance { get { return currentBalance; } }
 
     [SerializeField] TextMeshProUGUI displayBalance;
 
+    int currentSceneIndex;
+
     private void Awake()
     {
         currentBalance = startingBalance;
-        UpdateDisplay();
+    }
+
+    void Start()
+    {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (currentSceneIndex == 1)
+        {
+            UpdateDisplay();
+        }
+    }
+
+    void Update()
+    {
+        if (currentSceneIndex == 0 && Input.GetKeyDown(KeyCode.Space))
+        {
+            LoadBattleScene();
+        }
+        if (currentSceneIndex == 2 && Input.GetKeyDown(KeyCode.R))
+        {
+            LoadBattleScene();
+        }
     }
 
     public void Deposit(int amount)
     {
         currentBalance += Mathf.Abs(amount);
         UpdateDisplay();
+        if (currentBalance >= 500)
+        {
+            //Win the game
+            LoadWinScene();
+        }
     }
 
     public void Withdraw(int amount)
@@ -33,7 +61,7 @@ public class Bank : MonoBehaviour
         if (currentBalance <0)
         {
             //Lose the game
-            ReloadScene();
+            LoadBattleScene();
         }
     }
 
@@ -42,9 +70,14 @@ public class Bank : MonoBehaviour
         displayBalance.text = "Gold: " + currentBalance;
     }
 
-    void ReloadScene()
+    void LoadBattleScene()
     {
-        int currentScene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentScene);
+        SceneManager.LoadScene(1);
     }
+
+    void LoadWinScene()
+    {
+        SceneManager.LoadScene(2);
+    }
+
 }

@@ -68,7 +68,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 0.75
+  speed: 0.6
 --- !u!114 &-5214901172432485481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0320c3c913a855c4aba14e56f1e95fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHitPoints: 3
-  difficultyRamp: 2
+  enemyHitPoints: 1
+  difficultyRamp: 3
 --- !u!114 &1297068166447601685
 MonoBehaviour:
   m_ObjectHideFlags: 0
