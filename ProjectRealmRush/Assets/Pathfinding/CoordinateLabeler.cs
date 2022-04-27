@@ -27,7 +27,6 @@ public class CoordinateLabeler : MonoBehaviour
         DisplayCoordinates();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(!Application.isPlaying) // code only runs in edit mode
